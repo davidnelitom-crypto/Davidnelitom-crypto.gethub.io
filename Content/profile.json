@@ -1,57 +1,72 @@
 {
 "About": {
-  "Name": "Robert J Zendejo",
-  "Currently": "Computer Science Student",
-  "Headshot": "student-portrait.png",
-  "Thumbnail": "student-logo.webp",
-  "AboutText": "Hi, I am Bob Zendejo. I am a passionate computer science student with a keen interest in software development and programming. Currently, I am pursuing my undergraduate degree at Seattle Pacific University. I am dedicated to expanding my knowledge and skills in various areas of computer science, with a particular focus on C++ programming.<br><br>I enjoy tackling challenging programming projects and I thrive in collaborative environments where I can contribute my expertise and learn from my peers.<br><br>Beyond the classroom, I actively engage in extracurricular activities related to computer science, including hackathons, coding competitions, and open-source contributions. I believe in the importance of continuous learning and seek out opportunities to explore new technologies and methodologies."
+  "Name": "David Mbaz Nelito",
+  "Currently": "General Engineering Student (Electrical Engineering Focus)",
+  "Headshot": "david-portrait.png",
+  "Thumbnail": "david-logo.webp",
+  "AboutText": "Hi, I am David Mbaz Nelito. I am a passionate engineering student with a strong interest in electrical engineering and circuit design. I am currently pursuing my undergraduate degree in General Engineering with a focus on Electrical Engineering at Seattle Pacific University.<br><br>Through my coursework and projects, I have developed skills in circuit analysis, electronics, signal processing, and engineering problem solving. I enjoy designing and building electronic circuits, analyzing electrical systems, and applying engineering principles to real-world problems.<br><br>One of my favorite projects involved designing and building a Sallen-Key active band-pass filter capable of detecting a specific frequency signal (17 kHz). Projects like this have strengthened my understanding of analog electronics, operational amplifiers, and signal filtering techniques.<br><br>Beyond the classroom, I enjoy collaborating with other students on engineering projects and continuously expanding my knowledge in electrical systems, electronics, and emerging technologies."
 },
+
 "Contact": {
   "EMail": "zendejor@spu.edu",
-  "Phone": "(206) 555-5555",
-  "Portfolio": "https://www.github.com",
-  "LinkedIn": "https://linkedin.com",
-  "GitHub": "https://www.github.com"
+  "Phone": "(425) 324 6967",
+  "Portfolio": "https://github.com/davidnelitom-crypto",
+  "LinkedIn": "https://www.linkedin.com/in/david-nelito",
+  "GitHub": "https://github.com/davidnelitom-crypto"
 },
+
 "Experience": {
-  "ExperienceText": "Use this area to explain how you got to where you are and what you are currently doing now.<br><br>This is a good spot to talk yourself up.",
+  "ExperienceText": "I am currently a General Engineering student at Seattle Pacific University focusing on Electrical Engineering. My studies involve circuit design, electronics, signal analysis, and engineering problem solving. I enjoy hands-on projects where I design, simulate, and build electrical circuits while learning how engineering principles apply to real systems.",
   "School": "Seattle Pacific University",
-  "Major": "Computer Science",
-  "Graduation": "June 2023",
-  "EducationText": "Use this to add some narrative to your education section",
+  "Major": "General Engineering (Electrical Engineering Focus)",
+  "Graduation": "June 2027",
+  "EducationText": "At Seattle Pacific University I have been developing a strong foundation in engineering mathematics, physics, circuit analysis, and electronics. My coursework includes electrical circuits, signal analysis, and engineering design projects where I apply theoretical concepts to practical engineering problems.",
   "Employment": "Seattle Pacific University",
-  "Role": "Computer Science Lab Assistant",
-  "EmploymentText": "Use this to add some narrative to your employment section",
-  "Skills": ["C++", " JavaScript", " Node", " CSS"," HTML"],
-  "SkillsText": "Use this to add some narrative to your skills section",
-  "Resume": "student-resume.pdf"  
+  "Role": "Engineering Student",
+  "EmploymentText": "As an engineering student, I actively work on technical projects involving circuit analysis, electronic filter design, and signal processing. I collaborate with classmates on lab experiments, simulations, and engineering problem solving.",
+  "Skills": [
+    "Circuit Analysis",
+    "Electronics",
+    "LTspice",
+    "MATLAB",
+    "Analog Circuit Design",
+    "Signal Processing",
+    "Engineering Problem Solving",
+    "Electrical Measurements"
+  ],
+  "SkillsText": "My technical skills include circuit analysis, analog electronics, signal filtering, and circuit simulation using tools such as LTspice and MATLAB. I also have experience designing operational amplifier circuits, analyzing frequency responses, and building working prototypes in the lab.",
+  "Resume": "David_Mbaz_Nelito_Resume.pdf"
 },
+
 "Project1": {
-    "Title": "Interesting Project 1",
-    "Desc": "This is a description of Project One.<br><br>It has a GitHub repo and more details shown in screenshots.",
+    "Title": "Sallen-Key Active Band-Pass Filter (17 kHz)",
+    "Desc": "Designed and built an active band-pass filter using the Sallen-Key topology to detect a 17 kHz signal while rejecting other frequencies. The project involved calculating component values, simulating the circuit in LTspice, and physically building and testing the circuit. The system included multiple filter stages and a peak detector used to activate an LED when the target frequency was detected.",
     "GitHubRepo": "https://github.com",
-    "MainImage": "P1Main.png",
-    "DetailImages": ["P1Detail1.png","P1Detail2.png","P1Detail3.png"]
+    "MainImage": "filter-main.png",
+    "DetailImages": ["filter-stage.png","ltspice-graph.png","circuit-board.png"]
   },
+
   "Project2": {
-    "Title": "Interesting Project 2",
-    "Desc": "This is a description of Project Two.<br><br>It also has a GitHub repo and more details shown in screenshots.",
+    "Title": "Frequency Detection Circuit with Comparator",
+    "Desc": "Designed a frequency detection system that uses filtering and peak detection to identify a target signal frequency. The circuit includes a band-pass filter, peak detector, and comparator stage used to trigger a digital output when the desired signal is detected.",
     "GitHubRepo": "https://github.com",
-    "MainImage": "P2Main.png",
-    "DetailImages": ["P2Detail1.png","P2Detail2.png","P2Detail3.png","P2Detail4.png"]
+    "MainImage": "detector-main.png",
+    "DetailImages": ["peak-detector.png","comparator.png","signal-response.png","breadboard-circuit.png"]
   },
+
   "Project3": {
-    "Title": "Interesting Project 3",
-    "Desc": "This is a description of Project Three.<br><br>It does not have a GitHub repo or any additional screenshots.",
+    "Title": "RLC Transient Response Analysis",
+    "Desc": "Analyzed the transient response of second-order RLC circuits using both theoretical calculations and circuit simulations. The project involved observing overdamped, underdamped, and critically damped responses while comparing measured results with theoretical predictions.",
     "GitHubRepo": "",
-    "MainImage": "P3Main.png",
+    "MainImage": "rlc-main.png",
     "DetailImages": []
   },
+
   "Project4": {
-    "Title": "",
-    "Desc": "",
-    "GitHubRepo": "",
-    "MainImage": "",
+    "Title": "Engineering Portfolio Website",
+    "Desc": "Personal engineering portfolio website showcasing my projects, coursework, and technical skills as an electrical engineering student.",
+    "GitHubRepo": "https://github.com",
+    "MainImage": "portfolio-main.png",
     "DetailImages": []
   }
 }
