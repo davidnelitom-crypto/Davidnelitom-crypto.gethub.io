@@ -1,0 +1,83 @@
+Sallen  Key Project SPU
+
+Student Name: David Nelito 
+Instructor Name: Dr. Plett Melani
+Class: Circuit II
+
+System Description 
+The objective of this lab was to design and implement a frequency detection circuit that activates an LED only when a 17 kHz signal is present. The circuit consists of three main functional blocks:
+•	A band-pass filter centered at 17 kHz to isolate the desired frequency.
+•	A peak detector to convert the AC signal into a DC level proportional to the signal amplitude.
+•	A comparator (LM339) to compare the detected DC voltage against a reference voltage and drive an LED indicator when the target frequency is detected.
+The design was first simulated in LTspice, then implemented on a breadboard and tested using a Keysight DSOX1202G oscilloscope with Frequency Response Analysis (FRA).
+
+LTspice final Circuit 
+
+ 
+The band-pass filter was implemented using two cascaded active filter stages, each built with an operational amplifier. Each stage functions as a second-order band-pass filter, resulting in an overall fourth-order filter.
+
+Filter Characteristics
+	•	Number of stages: 2
+	•	Order of each stage: Second-order
+	•	Total filter order: Fourth-order
+	•	Center frequency: Approximately 17 kHz
+
+The use of multiple cascaded stages improves the selectivity and attenuation of unwanted frequencies.
+The gain of each op-amp stage is determined by using the non-inverting amplifier equation:
+Stage 1 Gain
+A(v1) = 1 + 16.4k/9.39k  = 2.75
+Stage 2 Gain
+A{v2} = 1 16.4k/9.36k =  2.75
+Total Amplifier Gain
+Av= 7.56
+
+ 
+Experimental Frequency Response (FRA)
+
+After constructing the circuit on a breadboard, the filter response was measured using the Frequency Response Analysis (FRA) feature of the oscilloscope.The FRA measurement confirmed that the filter’s peak occurs near 17 kHz, closely matching the simulation results.This verifies that the physical circuit performs as expected and successfully isolates the target frequency.
+
+ 
+
+Peak Detector Design
+
+The output of the filter is still an AC waveform. To determine the presence of the signal, the waveform must be converted into a DC voltage proportional to the signal amplitude. This was accomplished using an op-amp peak detector circuit. The peak detector uses a diode and capacitor to store the peak voltage of the waveform. 
+The design guideline from the lab states that the time constant should satisfy:
+RC = 50T to 100T . where T is the period of the signal. For a 17 kHz signal ;
+T = 1/17000 = 58.8 us
+Using a 330 kΩ resistor, I used a capacitor value of 10nF which allows the detector to track peaks while maintaining a stable DC output. Below is the a picture of the peak detector graph.
+ 
+
+
+Comparator Circuit
+
+The DC voltage from the peak detector is compared to a reference voltage V {ref} using an LM339 comparator. The comparator determines whether the detected voltage corresponds to the presence of the desired frequency. The reference voltage is generated using a voltage divide.
+Vpeak (17kHz) > Vref > Vpeak (10kHz, 25kHz)
+This ensures that the LED activates only when the 17 kHz signal is present. Since the LM339 output is open collector, I used a  pull-up resistor 3 kΩ pull the output high when the comparator is off.
+
+Physical Circuit 
+ 
+
+Conclusion
+
+A frequency detection circuit centered at 17 kHz was successfully designed, simulated, and implemented. The system consisted of a two-stage active band-pass filter, followed by a peak detector and an LM339 comparator used to drive an LED indicator. The band-pass filter was implemented using two cascaded second-order stages. Each stage contributes to the overall selectivity of the filter. The first stage was designed with a quality factor of approximately:
+•	Q1 = 0.67
+•	b1 = 1.49
+The second stage was designed with a higher quality factor:
+•	Q2 = 3
+•	b2 = 0.33
+
+This combination allowed me to make  the filter to achieve sufficient attenuation of unwanted frequencies while maintaining a strong response near the target frequency of 17 kHz. Simulation results obtained in LTspice showed a peak response around 17 kHz, with attenuation greater than 20 dB for undesired frequencies such as 10 kHz. These results were confirmed experimentally using the Frequency Response Analysis (FRA) feature of the oscilloscope. The filtered signal was then processed using a precision peak detector, which converted the AC signal into a DC voltage proportional to the signal amplitude. This voltage was compared to a reference voltage using an LM339 comparator. When the detected signal exceeded the reference threshold, the comparator output switched and activated an LED indicator.
+
+Parameter	1st Stage 	2nd Stage 
+Frequency 	17 kHz	17kHz
+Q	0.65	3
+Damping b	1.49	0.33
+Gain	2.75 V/V	2.75 V/V
+Total Gain	0.97	
+Capacitor	1nF	1nF
+Peak Detector RC	330KOhms, 15nF	4.95 ms 
+Comparator 	3kOmhs 	
+LED current Limiting 	680 Ohms 	
+
+Link to the Video 
+https://drive.google.com/file/d/15zAiqwnNrR-rhAwEx3jNrscDoeGa0v0U/view?usp=sharing
